@@ -34,7 +34,7 @@
 // Each KNoT Device or user has a unique ID and token as identification
 // mechanism
 #define KNOT_PROTOCOL_TOKEN_LEN			40
-#define KNOT_PROTOCOL_UUID_LEN			36
+#define KNOT_PROTOCOL_UUID_LEN			41
 // A human readable name for each device
 #define KNOT_PROTOCOL_DEVICE_NAME_LEN		64
 // A human readint8_table name for each data source/sink in the device
@@ -142,7 +142,7 @@ typedef struct __attribute__ ((packed)) {
 	int8_t			result;
 	char			uuid[KNOT_PROTOCOL_UUID_LEN];
 	char			token[KNOT_PROTOCOL_TOKEN_LEN];
-} knot_msg_credential; // hdr + 40 + 36 bytes
+} knot_msg_credential; // hdr + 40 + 41 bytes
 
 typedef struct __attribute__ ((packed)) {
 	knot_msg_header		hdr;
@@ -162,8 +162,8 @@ typedef struct __attribute__ ((packed)) {
 
 typedef struct __attribute__ ((packed)) {
 	uint8_t			value_type;	// KNOT_VALUE_TYPE_* (int, float, bool, raw)
-	uint8_t			unit;		// KNOT_UNIT_* 
-	uint16_t		type_id;	// KNOT_TYPE_ID_* 
+	uint8_t			unit;		// KNOT_UNIT_*
+	uint16_t		type_id;	// KNOT_TYPE_ID_*
 	char			name[KNOT_PROTOCOL_DATA_NAME_LEN];
 } knot_schema; // 69 bytes
 
