@@ -1,19 +1,19 @@
-/* 
+/*
  * Copyright (c) 2015, CESAR.
  * All rights reserved.
  *
  * This software may be modified and distributed under the terms
  * of the BSD license. See the LICENSE file for details.
  *
- */ 
- 
+ */
+
 #ifndef KNOT_TYPES_H
 #define KNOT_TYPES_H
 
-/* 
+/*
  * This file defines the semantic for KNoT data types and unities
- * used by KNoT data sources. 
- *  
+ * used by KNoT data sources.
+ *
  */
 
 // definition of invalid sensor id
@@ -123,11 +123,10 @@
 #define KNOT_UNIT_ENERGY_KCAL				0x06
 
 // definition of value type
-#define KNOT_VALUE_TYPE_INT				0x01
-#define KNOT_VALUE_TYPE_FLOAT				0x02
-#define KNOT_VALUE_TYPE_BOOL				0x03
-#define KNOT_VALUE_TYPE_RAW				0x04
-#define KNOT_VALUE_TYPE_MIN				KNOT_VALUE_TYPE_INT
+#define KNOT_VALUE_TYPE_NUMBER				0x01
+#define KNOT_VALUE_TYPE_BOOL				0x02
+#define KNOT_VALUE_TYPE_RAW				0x03
+#define KNOT_VALUE_TYPE_MIN				KNOT_VALUE_TYPE_NUMBER
 #define KNOT_VALUE_TYPE_MAX				(KNOT_VALUE_TYPE_RAW+1)
 #define KNOT_VALUE_TYPE_INVALID				0XFF
 
