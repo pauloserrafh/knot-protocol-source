@@ -104,18 +104,12 @@ typedef struct __attribute__ ((packed)) {
 	int32_t			multiplier;
 	int32_t			value_int;
 	uint32_t		value_dec;
-} knot_value_type_float;
-
-typedef struct __attribute__ ((packed)) {
-	int32_t			multiplier;
-	int32_t			value;
-} knot_value_type_int;
+} knot_value_type_number;
 
 typedef uint8_t knot_value_type_bool;
 
 typedef union __attribute__ ((packed)) {
-	knot_value_type_int	val_i;
-	knot_value_type_float	val_f;
+	knot_value_type_number	val_n;
 	knot_value_type_bool	val_b;
 } knot_value_types;
 
