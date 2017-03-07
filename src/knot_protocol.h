@@ -127,11 +127,13 @@ typedef union __attribute__ ((packed)) {
 typedef struct __attribute__ ((packed)) {
 	knot_msg_header		hdr;
 	uint8_t			sensor_id;	// App defined sensor id
+	uint8_t			notify;
 	knot_data		payload;
 } knot_msg_data;
 
 typedef struct __attribute__ ((packed)) {
 	uint8_t			event_flags;
+	uint8_t			notify_flags;
 	uint16_t		time_sec;
 	knot_value_types	lower_limit;
 	knot_value_types	upper_limit;
